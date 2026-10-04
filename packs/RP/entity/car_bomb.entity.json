@@ -1,0 +1,21 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "akumanusiaa:car_bomb",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/car_bomb"
+			},
+			"geometry": {
+				"default": "geometry.car_bomb"
+			},
+			"render_controllers": ["controller.render.default"],
+			"spawn_egg": {
+				"texture": "car_bomb_spawn_egg"
+			}
+		}
+	}
+}

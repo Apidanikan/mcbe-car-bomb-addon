@@ -1,0 +1,177 @@
+{
+  "format_version": "1.26.10",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "akumanusiaa:car_bomb",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "explode": {
+        "minecraft:explode": {
+          "fuse_length": 0,
+          "fuse_lit": true,
+          "power": 3,
+          "causes_fire": false,
+          "destroy_affected_by_griefing": false
+        }
+      }
+    },
+    "components": {
+      "minecraft:physics": {
+        "has_gravity": true,
+        "has_collision": true
+      },
+      "minecraft:movement": {
+        "value": 0.25
+      },
+      "minecraft:collision_box": {
+        "height": 1,
+        "width": 1
+      },
+      "minecraft:movement.basic": {},
+      "minecraft:input_ground_controlled": {},
+      "minecraft:rideable": {
+        "seat_count": 1,
+        "interact_text": "action.interact.ride.boat",
+        "seats": [
+          {
+            "position": [
+              0,
+              0.1,
+              0
+            ]
+          }
+        ]
+      },
+      "minecraft:variable_max_auto_step": {
+        "base_value": 1.2,
+        "controlled_value": 1.2
+      },
+      "minecraft:loot": {
+        "table": "loot_tables/entities/car_bomb.json"
+      },
+      "minecraft:buoyant": {
+        "apply_gravity": true,
+        "base_buoyancy": 1.0,
+        "movement_type": "none",
+        "big_wave_probability": 0.03,
+        "big_wave_speed": 10.0,
+        "drag_down_on_buoyancy_removed": 0,
+        "liquid_blocks": [
+          "water"
+        ]
+      },
+      "minecraft:underwater_movement": {
+        "value": 0.25
+      },
+      "minecraft:navigation.walk": {
+        "can_sink": false
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "cause": "fall",
+            "deals_damage": "no"
+          },
+          {
+            "cause": "fire",
+            "on_damage": {
+              "event": "meledak"
+            },
+            "damage_modifier": -999
+          },
+          {
+            "cause": "fire_tick",
+            "on_damage": {
+              "event": "meledak"
+            },
+            "damage_modifier": -999
+          },
+          {
+            "cause": "lava",
+            "on_damage": {
+              "event": "meledak"
+            },
+            "damage_modifier": -999
+          },
+          {
+            "cause": "block_explosion",
+            "on_damage": {
+              "event": "meledak"
+            },
+            "damage_modifier": -999
+          },
+          {
+            "cause": "entity_explosion",
+            "on_damage": {
+              "event": "meledak"
+            },
+            "damage_modifier": -999
+          }
+        ]
+      },
+      "minecraft:knockback_resistance": {
+        "value": 1.0
+      },
+      "minecraft:health": {
+        "value": 6,
+        "max": 6
+      },
+      "minecraft:pushable_by_entity": {
+        "presets": [
+          {
+            "filters": {
+              "all_of": [
+                {
+                  "test": "is_family",
+                  "subject": "other",
+                  "value": "sulfur_cube"
+                },
+                {
+                  "test": "enum_property",
+                  "subject": "other",
+                  "domain": "minecraft:sulfur_cube_archetype",
+                  "operator": "not",
+                  "value": "none"
+                },
+                {
+                  "test": "is_controlling_passenger_family",
+                  "subject": "self",
+                  "value": "player"
+                }
+              ]
+            },
+            "push_mode": "none"
+          },
+          {
+            "push_mode": "legacy_boat",
+            "strength_multiplier": 0.1,
+            "min_distance": 0.55,
+            "push_scale_self": 0.5,
+            "push_scale_other": 0.25
+          }
+        ]
+      },
+      "minecraft:pushable_by_block": {}
+    },
+    "events": {
+      "meledak": {
+        "add": {
+          "component_groups": [
+            "explode"
+          ]
+        }
+      },
+      "ex:plode": {
+        "queue_command": {
+          "command": [
+            "replaceitem entity @p slot.weapon.mainhand 0 air",
+            "damage @s 1 fire"
+          ]
+        }
+      }
+    }
+  }
+}

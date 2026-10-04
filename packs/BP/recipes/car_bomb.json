@@ -1,0 +1,29 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "akumanusiaa:car_bomb"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "PTP",
+      "###"
+    ],
+    "key": {
+      "P": {
+        "item": "minecraft:pale_oak_planks"
+      },
+      "T": {
+        "item": "minecraft:tnt"
+      },
+      "#": {
+        "item": "minecraft:warped_planks"
+      }
+    },
+    "result": {
+      "item": "akumanusiaa:car_bomb_spawn_egg"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+entity.akumanusiaa:car_bomb.name=Car Bomb
+item.spawn_egg.entity.akumanusiaa:car_bomb.name=§cCar Bomb §8[Place]§r
+item.akumanusiaa:detonate=§cDetonator §8[Use]§r
+howtoplay.car_bomb.title=How to Play
+howtoplay.category.akum=Car Bombing
+howtoplay.car_bomb=Crafting Recipe

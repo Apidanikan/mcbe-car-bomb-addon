@@ -1,0 +1,40 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Car Bomb",
+    "description": "by AkuManusiaa",
+    "uuid": "36aa3255-ec0a-2d67-6061-fa266c3882c8",
+    "version": [
+      1,
+      0,
+      0
+    ],
+    "min_engine_version": [
+      1,
+      16,
+      0
+    ]
+  },
+  "modules": [
+    {
+      "description": "Behavior",
+      "version": [
+        1,
+        0,
+        0
+      ],
+      "uuid": "13a08a3a-1fe6-1bf5-faea-05da9fcb369f",
+      "type": "data"
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "cd1c4533-8d92-a02d-f0d9-7a23a3f65861",
+      "version": [
+        1,
+        0,
+        0
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Car Bomb",
+    "description": "by AkuManusiaa",
+    "uuid": "cd1c4533-8d92-a02d-f0d9-7a23a3f65861",
+    "version": [
+      1,
+      0,
+      0
+    ],
+    "min_engine_version": [
+      1,
+      16,
+      0
+    ]
+  },
+  "modules": [
+    {
+      "description": "Car Bomb",
+      "type": "resources",
+      "uuid": "923fb6f0-f71e-c33b-3e14-65c426501211",
+      "version": [
+        1,
+        0,
+        0
+      ]
+    }
+  ]
+}

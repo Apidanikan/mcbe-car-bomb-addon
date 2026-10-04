@@ -1,0 +1,10 @@
+{
+	"texture_data": {
+		"car_bomb_spawn_egg": {
+			"textures": ["textures/items/car_bomb_spawn_egg"]
+		},
+		"detonate": {
+			"textures": [ "textures/items/detonate" ]
+		}
+	}
+}
